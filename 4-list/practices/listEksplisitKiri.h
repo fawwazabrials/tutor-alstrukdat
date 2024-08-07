@@ -5,6 +5,7 @@
 #ifndef ADT_LIST_EKSPLISIT_KIRI_H
 #define ADT_LIST_EKSPLISIT_KIRI_H
 
+#include <stdio.h>
 #include "boolean.h"
 
 /* Kamus Umum */
@@ -34,6 +35,9 @@ List MakeList();
 
 /* Mengirimkan true jika list L kosong, mengirimkan false jika tidak */
 boolean IsEmpty(List L);
+
+/* Mengirimkan true jika list L penuh, mengirimkan false jika tidak */
+boolean IsFull(List L);
 
 /* Mengirimkan elemen list yang ke-idx, bila indeks yang diberikan diluar dari 
    kapasitas maksimum atau panjang dari List maka kembalikan INVALID_VALUE  */
@@ -86,5 +90,16 @@ void DeleteAt(List *L, int i);
 /* Mengapus nilai akhir list, lakukan pergeseran untuk elemen-elemen 
    yang sudah ada. Bila list kosong, jangan lakukan apa-apa */
 void DeleteLast(List *L);
+
+/* Mencetak list ke layar dengan format berikut
+
+    [el1, el2, el3, ...]
+
+   Bila list kosong maka keluarkan saja 
+    
+    []
+
+ */
+void PrintList(List L);
 
 #endif
