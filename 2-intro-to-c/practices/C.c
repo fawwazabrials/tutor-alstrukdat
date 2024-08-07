@@ -13,3 +13,19 @@
 // note:
 // - terdapat newline setelah keluaran output
 // - untuk sekarang abaikan kasus dimana keluaran 0 detik mungkin terjadi
+
+#include <stdio.h>
+
+int main() {
+    // KAMUS
+    int second;
+    int jam, menit, detik;
+
+    // ALGORITMA
+    scanf("%d", &second);
+    jam = second / 3600;
+    menit = (second % 3600) / 60;
+    detik = second - (jam*3600 + menit*60);
+
+    printf("%d jam %d menit %d detik\n", jam, menit, detik);
+}
